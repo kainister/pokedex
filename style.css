@@ -1,0 +1,14 @@
+.big_block {
+    position: absolute;
+    background-color: red;
+}
+.left_block {
+    height: 550px;
+    width: 400px;
+}
+.right_block {
+    height: 440px;
+    width: 400px;
+    left: 408px;
+    top: 118px;
+}
