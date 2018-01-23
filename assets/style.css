@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "pokemon";
+    src: url("assets/pokemon_classic/pokemon.ttf");
+}
+p {
+    font-family: "pokemon";
+}
+.big_block {
+    position: absolute;
+    background-color: red;
+    border: solid black 3px;
+}
+.left_block {
+    height: 620px;
+    width: 400px;
+    top: 85px;
+    border-radius: 30px;
+    border-bottom-right-radius: unset;
+}
+.center_block {
+    background-color: darkred;
+    height: 510px;
+    width: 50px;
+    left: 411px;
+    top: 195px;
+}
+.right_block {
+    height: 510px;
+    width: 400px;
+    left: 464px;
+    top: 195px;
+    border-radius: 30px;
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+}
+.block {
+    position: absolute;
+}
+.picture_block {
+    background-color: #c1c1c1;
+    height: 253px;
+    width: 300px;
+    top: 234px;
+    left: 58px;
+    border-radius: 20px;
+    border-bottom-left-radius: 60px;
+}
+.up_block {
+    background-color: darkred;
+    height: 108px;
+    width: 402px;
+    top: 87px;
+    left: 10px;
+    border-radius: 30px;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+}
+.picture {
+    background-color: #9c9c9c;
+    height: 181px;
+    width: 260px;
+    top: 256px;
+    left: 79px;
+}
+.stat {
+    background-color: #9c9c9c;
+    height: 181px;
+    width: 360px;
+    top: 256px;
+    left: 488px;
+}
