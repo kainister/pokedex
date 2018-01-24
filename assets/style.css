@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/* IMPORT FONT */
 @font-face {
     font-family: "Pokemon Classic";
     src: url("./assets/pokemon_classic/pokemon.ttf") format("ttf");
@@ -7,6 +7,8 @@
 body {
     font-family: "Pokemon Classic", sans-serif;
 }
+/* end font */
+/* CSS FOR POKEDEX */
 .big_block {
     position: absolute;
     background-color: red;
@@ -25,6 +27,14 @@ body {
     width: 50px;
     left: 411px;
     top: 195px;
+}
+.white_center_block {
+    background-color: white;
+    height: 510px;
+    width: 0;
+    left: 438px;
+    top: 198px;
+    box-shadow: 0 0 20px 1px rgb(255, 255, 255);
 }
 .right_block {
     height: 510px;
@@ -56,10 +66,10 @@ body {
     border-radius: 30px;
     border-bottom-left-radius: unset;
     border-bottom-right-radius: unset;
-    box-shadow: 0px 4px 7px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 7px 3px rgba(0, 0, 0, 0.3);
 }
 .picture {
-    background-color: #9c9c9c;
+    background-color: rgb(23, 184, 194);
     border-radius: 10px;
     box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
     height: 181px;
@@ -71,6 +81,7 @@ img {
     border-radius: 10px;
     height: 100%;
     width: 100%;
+    box-shadow: 0 0 20px 2px rgb(20, 215, 227);
 }
 .stat {
     background-color: #9c9c9c;
@@ -104,7 +115,7 @@ img {
     left: 38px;
     border-radius: 50%;
     border: solid white 2px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
 .blue-reflect {
     background-color: #ffffff82;
@@ -130,7 +141,7 @@ img {
     left: 161px;
     border: solid black 1px;
     border-radius: 50%;
-    box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 .small-green-reflect {
     background-color: white;
@@ -148,7 +159,7 @@ img {
     left: 193px;
     border-radius: 50%;
     border: solid black 1px;
-    box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 .small-orange-reflect {
     background-color: white;
@@ -166,7 +177,7 @@ img {
     left: 225px;
     border-radius: 50%;
     border: solid black 1px;
-    box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 .small-red-reflect {
     background-color: white;
@@ -275,5 +286,14 @@ img {
     left: 753px;
     border-radius: 50%;
     border: solid black 1px;
-    box-shadow: 0px 0px 20px 2px rgb(227, 168, 20);
+    box-shadow: 0 0 20px 2px rgb(227, 168, 20);
+}
+.light {
+    background-color: white;
+    height: 5px;
+    width: 220px;
+    left: 138px;
+    top: 163px;
+    box-shadow: 0 0 20px 2px rgb(227, 168, 20);
+    border-radius: 10px;
 }
