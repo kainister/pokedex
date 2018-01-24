@@ -64,10 +64,111 @@ p {
     top: 256px;
     left: 79px;
 }
+img {
+    height: 100%;
+    width: 100%;
+}
 .stat {
     background-color: #9c9c9c;
     height: 181px;
     width: 360px;
     top: 256px;
     left: 488px;
+}
+.center-top {
+    background-color: rgba(29,5,3,0.79);
+    height: 57px;
+    width: 50px;
+    top: 264px;
+    left: 414px;
+}
+.center-bot {
+    background-color: rgba(29,5,3,0.79);
+    height: 57px;
+    width: 50px;
+    top: 597px;
+    left: 414px;
+}
+.blue-button {
+    background-color: dodgerblue;
+    height: 70px;
+    width: 70px;
+    top: 101px;
+    left: 38px;
+    border-radius: 50%;
+    border: solid white 2px;
+}
+.green-button {
+    background-color: #0edd0e;
+    height: 20px;
+    width: 20px;
+    top: 124px;
+    left: 161px;
+    border-radius: 50%;
+}
+.orange-button {
+    background-color: #dd4d00;
+    height: 20px;
+    width: 20px;
+    top: 124px;
+    left: 193px;
+    border-radius: 50%;
+}
+.red-button {
+    background-color: #dd1107;
+    height: 20px;
+    width: 20px;
+    top: 124px;
+    left: 225px;
+    border-radius: 50%;
+}
+.cross_vertical {
+    background-color: black;
+    height: 120px;
+    width: 30px;
+    top: 548px;
+    left: 285px;
+}
+.cross_horizontal {
+    background-color: black;
+    height: 30px;
+    width: 120px;
+    top: 595px;
+    left: 241px;
+}
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #262525d6;
+    top: 559px;
+    left: 290px;
+}
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #262525d6;
+    top: 648px;
+    left: 290px;
+}
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #262525d6;
+    top: 600px;
+    left: 341px;
+}
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right:10px solid #262525d6;
+    top: 600px;
+    left: 251px;
 }
