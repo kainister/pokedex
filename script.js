@@ -1,6 +1,9 @@
 function searchPokemon(lowerPokename, pokemon, pokename) {
     var errorBlock = $('#error_block');
-    if (pokename === 'Nidoran') {
+    if (pokename === 'Patoche') {
+        displayPokemon(pokename, 'psychic');
+        $('#image').attr('src', 'http://paroles2chansons.lemonde.fr/lib/images/upload/artists/sebastien-patoche.jpg');
+    }else if (pokename === 'Nidoran') {
         errorBlock.text('Please, specify: \'nidoran-m\' or \'nidoran-f\'');
     } else {
         for (var i in pokemon) {
@@ -23,7 +26,6 @@ function searchPokemon(lowerPokename, pokemon, pokename) {
                 return false;
             }
         }
-
     }
 }
 
@@ -34,7 +36,6 @@ function displayPokemon(name, type) {
     image.attr('src', 'https://img.pokemondb.net/artwork/' + name.toLowerCase() + '.jpg');
     pokemonName.text('Name : ' + name);
     pokemonType.text('Type : ' + type);
-    $('error_block').text('You find: ' + name);
 }
 
 $(function () {
