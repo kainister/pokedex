@@ -1,29 +1,36 @@
-function displayPokemon (inputname, pokemon, pokename) {
-    var image = $('#image');
-    var error = true;
-    console.log(pokemon);
+function displayPokemon(lowerPokename, pokemon, pokename) {
     for (var i in pokemon) {
-        console.log(pokemon[i]);
-        if (isNaN(inputname) === true) {
-            console.log(pokemon[i]);
+        var name = pokemon[i].name;
+        var type = pokemon[i].type;
+        if (isNaN(lowerPokename) === true) {
             if (pokename === pokemon[i].name) {
-                image.attr('src', 'https://img.pokemondb.net/artwork/' + inputname + '.jpg');
-                error = false;
-                console.log(error);
+                pokemonFound(name, type);
                 return false;
+            } else {
+                console.log('pokemon not found');
             }
-            console.log(error);
-            isPokemonFound(error, pokename);
+        } else if (pokename === i) {
+            pokemonFound(name, type);
+            return false;
+        } else if (1 > pokename || 151 < pokename) {
+            console.log('take a number between 1 and 151');
+            return false;
         }
     }
+
 }
-function isPokemonFound (error, pokename){
-    if (error === true) {
-        console.log(pokename+' not found');
-    } else if (error === false) {
-        console.log('Your catch '+pokename);
-    }
+
+function pokemonFound(name, type) {
+    console.log(name);
+    var image = $('#image');
+    var pokemonName = $('#pokemonName');
+    var pokemonType = $('#pokemonType');
+    image.attr('src', 'https://img.pokemondb.net/artwork/' + name.toLowerCase() + '.jpg');
+    pokemonName.text('Name : ' + name);
+    pokemonType.text('Type : ' + type);
+    console.log('You caught: ' + name);
 }
+
 $(function () {
     $.ajax({
         url: 'pokemon.json',
@@ -35,19 +42,18 @@ $(function () {
     });
 
     $('form[name="myForm"]').submit(function () {
+        /* GET pokemon.son FROM LOCALSTORAGE */
         var pokemons = localStorage.getItem('pokemons');
         var pokemon = JSON.parse(pokemons);
-        for (var i in pokemon){
-            console.log(pokemon[i].name);
-        }
 
 
+        /* TAKE VALUE OF INPUT AND MAKE UPPER FIRST CHAR*/
         var inputname = $('#pokename').val();
         var name = inputname.substr(1);
         var firstChar = inputname.charAt(0).toUpperCase();
         var pokename = firstChar + name;
-        console.log(pokemon);
-        displayPokemon(inputname, pokemon, pokename);
+        var lowerPokename = inputname.toLowerCase();
+        displayPokemon(lowerPokename, pokemon, pokename);
 
         return false;
     });
