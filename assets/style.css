@@ -4,10 +4,17 @@
     font-family: "Pokemon Classic";
     src: url("./assets/pokemon_classic/pokemon.ttf") format("ttf");
 }
-body {
+span {
     font-family: "Pokemon Classic", sans-serif;
 }
 /* end font */
+
+/* STYLE FOR ERROR MESSAGE */
+#error_block {
+    color: red;
+}
+/* end error */
+
 /* CSS FOR POKEDEX */
 .big_block {
     position: absolute;
@@ -298,3 +305,4 @@ img {
     box-shadow: 0 0 20px 2px rgb(227, 168, 20);
     border-radius: 10px;
 }
+/* end for pokedex */

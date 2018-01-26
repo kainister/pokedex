@@ -1,34 +1,40 @@
-function displayPokemon(lowerPokename, pokemon, pokename) {
-    for (var i in pokemon) {
-        var name = pokemon[i].name;
-        var type = pokemon[i].type;
-        if (isNaN(lowerPokename) === true) {
-            if (pokename === pokemon[i].name) {
-                pokemonFound(name, type);
-                return false;
+function searchPokemon(lowerPokename, pokemon, pokename) {
+    var errorBlock = $('#error_block');
+    if (pokename === 'Nidoran') {
+        errorBlock.text('Please, specify: \'nidoran-m\' or \'nidoran-f\'');
+    } else {
+        for (var i in pokemon) {
+            var name = pokemon[i].name;
+            var type = pokemon[i].type;
+            if (isNaN(lowerPokename) === true && pokename === pokemon[i].name) {
+                displayPokemon(name, type);
+                errorBlock.text('');
+                break;
             } else {
-                console.log('pokemon not found');
+                errorBlock.text(pokename + ' not found.');
             }
-        } else if (pokename === i) {
-            pokemonFound(name, type);
-            return false;
-        } else if (1 > pokename || 151 < pokename) {
-            console.log('take a number between 1 and 151');
-            return false;
         }
-    }
+        if (isNaN(lowerPokename) === false) {
+            if (pokename === i) {
+                displayPokemon(name, type);
+                return false;
+            } else if (1 > pokename || 151 < pokename) {
+                errorBlock.text('pokemon number ' + pokename + ' not found, please enter a number between 1 and 151.');
+                return false;
+            }
+        }
 
+    }
 }
 
-function pokemonFound(name, type) {
-    console.log(name);
+function displayPokemon(name, type) {
     var image = $('#image');
     var pokemonName = $('#pokemonName');
     var pokemonType = $('#pokemonType');
     image.attr('src', 'https://img.pokemondb.net/artwork/' + name.toLowerCase() + '.jpg');
     pokemonName.text('Name : ' + name);
     pokemonType.text('Type : ' + type);
-    console.log('You caught: ' + name);
+    $('error_block').text('You find: ' + name);
 }
 
 $(function () {
@@ -53,7 +59,7 @@ $(function () {
         var firstChar = inputname.charAt(0).toUpperCase();
         var pokename = firstChar + name;
         var lowerPokename = inputname.toLowerCase();
-        displayPokemon(lowerPokename, pokemon, pokename);
+        searchPokemon(lowerPokename, pokemon, pokename);
 
         return false;
     });
