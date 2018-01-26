@@ -1,6 +1,4 @@
-{
-  "pokemon": [
-    {
+ {
       "1": {
         "name": "Bulbasaur",
         "attack": 49,
@@ -422,7 +420,7 @@
         "curve": 1.6
       },
       "29": {
-        "name": "Nidoran",
+        "name": "Nidoran-f",
         "attack": 47,
         "defense": 52,
         "evolveLevel": 16,
@@ -469,7 +467,7 @@
         "curve": 1.3
       },
       "32": {
-        "name": "Nidoran",
+        "name": "Nidoran-m",
         "attack": 57,
         "defense": 40,
         "evolveLevel": 16,
@@ -2248,6 +2246,4 @@
         ],
         "probability": 3
       }
-    }
-  ]
-}
+ }
