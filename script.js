@@ -8,7 +8,7 @@ function searchPokemon(lowerPokename, pokemon, pokename) {
         for (var i in pokemon) {
             var name = pokemon[i].name;
             var type = pokemon[i].type;
-            if (isNaN(lowerPokename) === true && pokename === pokemon[i].name) { //IF THE POKEMON EXIST
+             if (isNaN(lowerPokename) === true && pokename === pokemon[i].name) { //IF THE POKEMON EXIST
                 errorBlock.text('');
                 displayPokemon(name, type);
                 break;
@@ -16,11 +16,11 @@ function searchPokemon(lowerPokename, pokemon, pokename) {
                 errorBlock.text(pokename + ' not found.');
             }
             if (isNaN(lowerPokename) === false) { // IF USER SEND A NUMBER
-                if ( pokename === 152) {
+                if (i == 152) {
+                    errorBlock.text('');
                     displayPatoche();
                     return false;
-                } else if (pokename === i) {
-                    console.log('patoche');
+                } else if (pokename === i ) {
                     errorBlock.text('');
                     displayPokemon(name, type);
                     return false;
@@ -45,7 +45,7 @@ function displayPatoche() {
     var image = $('#image');
     var pokemonName = $('#pokemonName');
     var pokemonType = $('#pokemonType');
-    image.attr('src', 'http://paroles2chansons.lemonde.fr/lib/images/upload/artists/sebastien-patoche.jpg');
+    image.attr('src', ' http://www.chartsinfrance.net/style/breves/6/photo_1373379820.jpg');
     pokemonName.text('Name : Patoche');
     pokemonType.text('Type : psychic');
 }
