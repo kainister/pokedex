@@ -3,8 +3,12 @@ function searchPokemon(lowerPokename, pokemon, pokename) {
     if (pokename === 'Patoche') { //PRESENT FOR EKITO KUN
         displayPatoche();
     } else if (pokename === 'Nidoran') { //PRECISE MALE OR FEMALE NIDORAN
-        errorBlock.text('Please, specify: \'nidoran-m\' or \'nidoran-f\'');
-    } else {
+        errorBlock.text('Please, specify: \'Nidoran-m\' or \'Nidoran-f\'');
+    } else if (pokename === 'Mr. mime') { //CHANGE NAME
+        errorBlock.text('Try instead: \' Mr-mime\'');
+    }else if (pokename === 'Farfetch\'d') { //CHANGE NAME
+        errorBlock.text('Try instead: \'Farfetchd\'');
+    }else {
         for (var i in pokemon) {
             var name = pokemon[i].name;
             var type = pokemon[i].type;
