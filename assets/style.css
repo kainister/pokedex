@@ -27,6 +27,7 @@ span {
     border: solid black 3px;
 }
 .left_block {
+    background-color: darkred;
     height: 620px;
     width: 400px;
     top: 85px;
@@ -159,7 +160,8 @@ span {
 }
 .pokedex {
     top: 281px;
-    left: 132px;
+    left: 88px;
+    font-size: 211%
 }
 @media screen and (min-width: 769px) { /*FOR POKEDEX OPENED */
     .open {
@@ -170,6 +172,10 @@ span {
     }
     .pokedex {
         display: none;
+    }
+
+    .left_block {
+        background-color: red;
     }
 
     .white_center_block {
