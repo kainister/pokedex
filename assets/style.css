@@ -40,6 +40,8 @@ span {
     width: 50px;
     left: 411px;
     top: 195px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 .block {
     position: absolute;
