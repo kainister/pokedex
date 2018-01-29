@@ -29,7 +29,7 @@ function searchPokemon(lowerPokename, pokemon, pokename) {
                     displayPokemon(name, type);
                     return false;
                 } else if (1 > pokename || 152 < pokename) {
-                    errorBlock.text('pokemon number ' + pokename + ' not found, please enter a number between 1 and 151.');
+                    errorBlock.text('pokemon number :' + pokename + ' not found, please enter a number between 1 and 151.');
                     return false;
                 }
             }
