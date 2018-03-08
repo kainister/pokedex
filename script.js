@@ -1,8 +1,6 @@
 function searchPokemon(lowerPokename, pokemon, pokename) {
     var errorBlock = $('#error_block');
-    if (pokename === 'Patoche') { //PRESENT FOR EKITO KUN
-        displayPatoche();
-    } else if (pokename === 'Nidoran') { //PRECISE MALE OR FEMALE NIDORAN
+    if (pokename === 'Nidoran') { //PRECISE MALE OR FEMALE NIDORAN
         errorBlock.text('Please, specify: \'Nidoran-m\' or \'Nidoran-f\'');
     } else if (pokename === 'Mr. mime') { //CHANGE NAME
         errorBlock.text('Try instead: \' Mr-mime\'');
@@ -20,15 +18,11 @@ function searchPokemon(lowerPokename, pokemon, pokename) {
                 errorBlock.text(pokename + ' not found.');
             }
             if (isNaN(lowerPokename) === false) { // IF USER SEND A NUMBER
-                if (i == 152) {
-                    errorBlock.text('');
-                    displayPatoche();
-                    return false;
-                } else if (pokename === i ) {
+                if (pokename === i ) {
                     errorBlock.text('');
                     displayPokemon(name, type);
                     return false;
-                } else if (1 > pokename || 152 < pokename) {
+                } else if (1 > pokename || 151 < pokename) {
                     errorBlock.text('pokemon number :' + pokename + ' not found, please enter a number between 1 and 151.');
                     return false;
                 }
@@ -44,14 +38,6 @@ function displayPokemon(name, type) { // DISPLAY POKEMON AND THESE NAME AND TYPE
     image.attr('src', 'https://img.pokemondb.net/artwork/' + name.toLowerCase() + '.jpg');
     pokemonName.text('Name : ' + name);
     pokemonType.text('Type : ' + type);
-}
-function displayPatoche() {
-    var image = $('#image');
-    var pokemonName = $('#pokemonName');
-    var pokemonType = $('#pokemonType');
-    image.attr('src', ' http://www.chartsinfrance.net/style/breves/6/photo_1373379820.jpg');
-    pokemonName.text('Name : Patoche');
-    pokemonType.text('Type : psychic');
 }
 
 $(function () {

@@ -2245,22 +2245,5 @@
           50
         ],
         "probability": 3
-      },
-   "152": {
-     "name": "Patoche",
-     "attack": 110,
-     "defense": 110,
-     "type": "psychic",
-     "moves": [
-       "confusion",
-       "swift",
-       "psychic"
-     ],
-     "curve": 1,
-     "levels": [
-       70,
-       70
-     ],
-     "probability": 1
-   }
+      }
  }
